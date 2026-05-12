@@ -25,7 +25,7 @@ COPY --from=builder /app/configs ./configs
 
 # Default environment overrides (can be overridden at runtime)
 ENV GIN_MODE=release
-ENV DB_DSN="root:G-;fnxjV4Ck(@tcp(mysql:3306)/stridemoor?charset=utf8mb4&parseTime=True&loc=Asia%2FShanghai"
+ENV DB_DSN="user:password@tcp(mysql:3306)/stridemoor?charset=utf8mb4&parseTime=True&loc=Asia%2FShanghai"
 
 EXPOSE 8080
 
