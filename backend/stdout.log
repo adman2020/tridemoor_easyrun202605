@@ -1,0 +1,1140 @@
+
+2026/05/08 00:11:28 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.099ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:28 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.143ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:28 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.680ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.095ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.012ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.188ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.577ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:29 [32m
+[0m[33m[1.111ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32m
+[0m[33m[3.296ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.273ms] [34;1m[rows:3][0m 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'stridemoor' 
+	AND TABLE_NAME = 'users' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2026/05/08 00:11:29 [32m
+[0m[33m[0.608ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32m
+[0m[33m[2.173ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32m
+[0m[33m[3.793ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'users' AND constraint_name = 'uni_users_phone'
+
+2026/05/08 00:11:29 [32m
+[0m[33m[1.227ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32m
+[0m[33m[2.187ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32m
+[0m[33m[2.729ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'users' AND index_name = 'idx_phone'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[79.636ms] [34;1m[rows:0][0m ALTER TABLE `users` MODIFY COLUMN `total_distance` decimal(10,2) DEFAULT 0
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.223ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.733ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.945ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'users' AND index_name = 'idx_phone'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.675ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.283ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.805ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'routes' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.139ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.717ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.906ms] [34;1m[rows:-][0m SELECT * FROM `routes` LIMIT 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.368ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'routes' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[54.492ms] [34;1m[rows:0][0m ALTER TABLE `routes` MODIFY COLUMN `elevation_gain` decimal(10,2) DEFAULT 0
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[47.500ms] [34;1m[rows:0][0m ALTER TABLE `routes` MODIFY COLUMN `elevation_loss` decimal(10,2) DEFAULT 0
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[51.347ms] [34;1m[rows:0][0m ALTER TABLE `routes` MODIFY COLUMN `avg_stride` decimal(5,2) DEFAULT 0
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.093ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.793ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.764ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'routes' AND constraint_name = 'fk_users_routes'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.060ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.187ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.401ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'routes' AND index_name = 'idx_creator'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.107ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.140ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.802ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'routes' AND index_name = 'idx_city'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.125ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.156ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.874ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'route_points' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.191ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.770ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.788ms] [34;1m[rows:-][0m SELECT * FROM `route_points` LIMIT 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.779ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'route_points' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.092ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.132ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.517ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'route_points' AND constraint_name = 'fk_routes_points'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.571ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.301ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.791ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'runs' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.083ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.771ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.909ms] [34;1m[rows:-][0m SELECT * FROM `runs` LIMIT 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.909ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'runs' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[69.115ms] [34;1m[rows:0][0m ALTER TABLE `runs` MODIFY COLUMN `elevation_gain` decimal(10,2) DEFAULT 0
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[79.282ms] [34;1m[rows:0][0m ALTER TABLE `runs` MODIFY COLUMN `elevation_loss` decimal(10,2) DEFAULT 0
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.137ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.781ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.843ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'runs' AND constraint_name = 'fk_routes_runs'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.559ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.447ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.852ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'runs' AND constraint_name = 'fk_users_runs'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.205ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.258ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.876ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'runs' AND index_name = 'idx_start_time'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.122ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.228ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.893ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'runs' AND index_name = 'idx_user'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.093ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.304ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.287ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'runs' AND index_name = 'idx_route'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.105ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.299ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.708ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'run_splits' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.531ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.816ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.857ms] [34;1m[rows:-][0m SELECT * FROM `run_splits` LIMIT 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.179ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'run_splits' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[32.391ms] [34;1m[rows:0][0m ALTER TABLE `run_splits` MODIFY COLUMN `elevation_gain` decimal(10,2) DEFAULT 0
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[27.538ms] [34;1m[rows:0][0m ALTER TABLE `run_splits` MODIFY COLUMN `elevation_loss` decimal(10,2) DEFAULT 0
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.567ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.738ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.715ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'run_splits' AND constraint_name = 'fk_runs_splits'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.089ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.228ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.614ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'run_splits' AND index_name = 'uk_run_split'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.125ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.271ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.263ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'run_splits' AND index_name = 'idx_run'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.621ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.238ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.803ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'run_samples' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.092ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.258ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.984ms] [34;1m[rows:-][0m SELECT * FROM `run_samples` LIMIT 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.772ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'run_samples' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[35.562ms] [34;1m[rows:0][0m ALTER TABLE `run_samples` MODIFY COLUMN `distance_from_start` decimal(10,2) DEFAULT 0
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.086ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.780ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.753ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'route_favorites' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.118ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.645ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.766ms] [34;1m[rows:-][0m SELECT * FROM `route_favorites` LIMIT 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.446ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'route_favorites' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.266ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.627ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.252ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'route_favorites' AND constraint_name = 'fk_routes_favorites'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.088ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.708ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.758ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'route_favorites' AND constraint_name = 'fk_users_favorites'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.528ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.358ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.064ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'route_favorites' AND index_name = 'uk_user_route'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.560ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.256ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.860ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'route_favorites' AND index_name = 'idx_user'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.558ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.401ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.921ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'route_favorites' AND index_name = 'idx_route'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.122ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.528ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.768ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'follows' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.563ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.279ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.732ms] [34;1m[rows:-][0m SELECT * FROM `follows` LIMIT 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.554ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'follows' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.542ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.349ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.875ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'follows' AND index_name = 'idx_follower'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.838ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.537ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.603ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'follows' AND index_name = 'idx_following'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.405ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.711ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.815ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'challenges' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.168ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.698ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[4.401ms] [34;1m[rows:-][0m SELECT * FROM `challenges` LIMIT 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.434ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'challenges' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.661ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.574ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.928ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'challenges' AND constraint_name = 'fk_challenges_winner'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.125ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.271ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.689ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'challenges' AND constraint_name = 'fk_challenges_target_run'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.105ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.236ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.819ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'challenges' AND constraint_name = 'fk_challenges_route'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.163ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.628ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.280ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'challenges' AND constraint_name = 'fk_challenges_challenger'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.038ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.313ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.229ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'challenges' AND constraint_name = 'fk_challenges_invitee'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.131ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.307ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.524ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'challenges' AND index_name = 'idx_expires'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.564ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.316ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.812ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'challenges' AND index_name = 'idx_route'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.137ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.645ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.805ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'challenges' AND index_name = 'idx_challenger'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.097ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.234ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.361ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'challenges' AND index_name = 'idx_invitee'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.552ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.907ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.297ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'challenges' AND index_name = 'idx_target_run'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.084ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.673ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.763ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'challenges' AND index_name = 'idx_status'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.015ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.374ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.839ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'comparisons' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.561ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.703ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.407ms] [34;1m[rows:-][0m SELECT * FROM `comparisons` LIMIT 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.974ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'comparisons' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:29 [32m
+[0m[33m[1.173ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32m
+[0m[33m[3.128ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.802ms] [34;1m[rows:4][0m 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'stridemoor' 
+	AND TABLE_NAME = 'comparisons' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2026/05/08 00:11:29 [32m
+[0m[33m[0.558ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32m
+[0m[33m[2.207ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32m
+[0m[33m[2.622ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'comparisons' AND constraint_name = 'uni_comparisons_challenge_id'
+
+2026/05/08 00:11:29 [32m
+[0m[33m[1.048ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32m
+[0m[33m[2.265ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32m
+[0m[33m[2.107ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'comparisons' AND index_name = 'idx_challenge'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.166ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.744ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.992ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'comparisons' AND constraint_name = 'fk_comparisons_run_b'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.111ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.810ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.256ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'comparisons' AND constraint_name = 'fk_challenges_comparison'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.413ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.501ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.753ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'comparisons' AND constraint_name = 'fk_comparisons_run_a'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.128ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.338ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.764ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'comparisons' AND index_name = 'idx_challenge'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.121ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.718ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.486ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'comparisons' AND index_name = 'idx_run_a'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.099ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.556ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.930ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'comparisons' AND index_name = 'idx_run_b'
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.930ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.251ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:29 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.809ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'friendships' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.570ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.717ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.788ms] [34;1m[rows:-][0m SELECT * FROM `friendships` LIMIT 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.773ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'friendships' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.575ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.261ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.781ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'friendships' AND constraint_name = 'fk_friendships_user_a'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.633ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.331ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.848ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'friendships' AND constraint_name = 'fk_friendships_user_b'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.389ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.283ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.777ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'friendships' AND index_name = 'uk_friends'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.079ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.322ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.986ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'friendships' AND index_name = 'idx_user_a'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.153ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.842ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.801ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'friendships' AND index_name = 'idx_user_b'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.156ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.832ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.380ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'route_leaderboards' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.092ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.309ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[4.111ms] [34;1m[rows:-][0m SELECT * FROM `route_leaderboards` LIMIT 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.370ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'route_leaderboards' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.180ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.262ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.358ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'route_leaderboards' AND constraint_name = 'fk_route_leaderboards_run'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.561ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.323ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.870ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'route_leaderboards' AND constraint_name = 'fk_routes_leaderboards'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.134ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.426ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.274ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'route_leaderboards' AND constraint_name = 'fk_route_leaderboards_user'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.092ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.841ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.240ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'route_leaderboards' AND index_name = 'uk_route_user'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.971ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.434ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.119ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'route_leaderboards' AND index_name = 'idx_route_time'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.519ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.538ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.040ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'route_leaderboards' AND index_name = 'idx_user'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.083ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.663ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.926ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'posts' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.099ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.256ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.780ms] [34;1m[rows:-][0m SELECT * FROM `posts` LIMIT 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.867ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'posts' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.595ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.378ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.288ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'posts' AND constraint_name = 'fk_posts_user'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.614ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.266ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.842ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'posts' AND constraint_name = 'fk_posts_run'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.133ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.414ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.807ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'posts' AND constraint_name = 'fk_posts_route'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.124ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.908ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.510ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'posts' AND index_name = 'idx_post_user'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.644ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.819ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.842ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'posts' AND index_name = 'idx_post_run'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.123ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.836ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.514ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'posts' AND index_name = 'idx_post_route'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.574ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.244ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.910ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'post_comments' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.132ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.213ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.858ms] [34;1m[rows:-][0m SELECT * FROM `post_comments` LIMIT 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.825ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'post_comments' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.135ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.537ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.956ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'post_comments' AND constraint_name = 'fk_post_comments_user'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.118ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.191ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.804ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'post_comments' AND index_name = 'idx_comment_post'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.118ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.772ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.400ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'post_comments' AND index_name = 'idx_comment_user'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.099ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.345ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.801ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'post_likes' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.089ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.788ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.680ms] [34;1m[rows:-][0m SELECT * FROM `post_likes` LIMIT 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.755ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'post_likes' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.079ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.384ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.892ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'devices' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.947ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.311ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.203ms] [34;1m[rows:-][0m SELECT * FROM `devices` LIMIT 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.975ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'devices' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.584ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.240ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.800ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'devices' AND index_name = 'idx_device_user'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[0.670ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.850ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.851ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'stridemoor' AND table_name = 'import_records' AND table_type = 'BASE TABLE'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.144ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.255ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.722ms] [34;1m[rows:-][0m SELECT * FROM `import_records` LIMIT 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.914ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'stridemoor' AND table_name = 'import_records' ORDER BY ORDINAL_POSITION
+
+2026/05/08 00:11:30 [32m
+[0m[33m[1.132ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32m
+[0m[33m[2.226ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.831ms] [34;1m[rows:4][0m 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'stridemoor' 
+	AND TABLE_NAME = 'import_records' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2026/05/08 00:11:30 [32m
+[0m[33m[1.281ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32m
+[0m[33m[2.844ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32m
+[0m[33m[2.773ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'stridemoor' AND table_name = 'import_records' AND constraint_name = 'uni_import_records_source_id'
+
+2026/05/08 00:11:30 [32m
+[0m[33m[1.236ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32m
+[0m[33m[2.192ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32m
+[0m[33m[3.675ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'import_records' AND index_name = 'uk_source_srcid'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.151ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.798ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.889ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'import_records' AND index_name = 'idx_import_user'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.237ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[3.379ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.860ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'import_records' AND index_name = 'idx_import_source'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[1.099ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.225ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'stridemoor%' ORDER BY SCHEMA_NAME='stridemoor' DESC,SCHEMA_NAME limit 1
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:37
+[0m[33m[2.493ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'stridemoor' AND table_name = 'import_records' AND index_name = 'uk_source_srcid'
+
+2026/05/08 00:11:30 [32mD:/AI/StrideMoor/backend/pkg/database/database.go:60
+[0m[33m[8.636ms] [34;1m[rows:0][0m CREATE TABLE IF NOT EXISTS route_points (
+		route_id    CHAR(36) NOT NULL,
+		point_index INT NOT NULL,
+		latitude    DECIMAL(10,7) NOT NULL,
+		longitude   DECIMAL(10,7) NOT NULL,
+		altitude    DECIMAL(10,2) DEFAULT NULL,
+		PRIMARY KEY (route_id, point_index),
+		INDEX idx_route (route_id)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /health                   --> stridemoor-api/internal/router.SetupRouter.func1 (3 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> stridemoor-api/internal/handler.(*UserHandler).Register-fm (3 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> stridemoor-api/internal/handler.(*UserHandler).Login-fm (3 handlers)
+[GIN-debug] POST   /api/v1/auth/refresh      --> stridemoor-api/internal/handler.(*UserHandler).RefreshToken-fm (3 handlers)
+[GIN-debug] GET    /api/v1/user/profile      --> stridemoor-api/internal/handler.(*UserHandler).GetProfile-fm (4 handlers)
+[GIN-debug] PUT    /api/v1/user/profile      --> stridemoor-api/internal/handler.(*UserHandler).UpdateProfile-fm (4 handlers)
+[GIN-debug] PUT    /api/v1/user/password     --> stridemoor-api/internal/handler.(*UserHandler).UpdatePassword-fm (4 handlers)
+[GIN-debug] POST   /api/v1/runs/start        --> stridemoor-api/internal/handler.(*RunHandler).StartRun-fm (4 handlers)
+[GIN-debug] POST   /api/v1/runs/:id/samples  --> stridemoor-api/internal/handler.(*RunHandler).UploadSamples-fm (4 handlers)
+[GIN-debug] POST   /api/v1/runs/:id/finish   --> stridemoor-api/internal/handler.(*RunHandler).FinishRun-fm (4 handlers)
+[GIN-debug] GET    /api/v1/runs              --> stridemoor-api/internal/handler.(*RunHandler).GetRunList-fm (4 handlers)
+[GIN-debug] GET    /api/v1/runs/:id          --> stridemoor-api/internal/handler.(*RunHandler).GetRunDetail-fm (4 handlers)
+[GIN-debug] POST   /api/v1/runs/:id/bookmark --> stridemoor-api/internal/handler.(*RunHandler).BookmarkRun-fm (4 handlers)
+[GIN-debug] DELETE /api/v1/runs/:id/bookmark --> stridemoor-api/internal/handler.(*RunHandler).UnbookmarkRun-fm (4 handlers)
+[GIN-debug] GET    /api/v1/runs/bookmarks/list --> stridemoor-api/internal/handler.(*RunHandler).ListBookmarks-fm (4 handlers)
+[GIN-debug] POST   /api/v1/runs/:id/companion --> stridemoor-api/internal/handler.(*RunHandler).CompanionComplete-fm (4 handlers)
+[GIN-debug] DELETE /api/v1/runs/:id          --> stridemoor-api/internal/handler.(*RunHandler).DeleteRun-fm (4 handlers)
+[GIN-debug] POST   /api/v1/routes            --> stridemoor-api/internal/handler.(*RouteHandler).CreateRoute-fm (4 handlers)
+[GIN-debug] GET    /api/v1/routes            --> stridemoor-api/internal/handler.(*RouteHandler).ListRoutes-fm (4 handlers)
+[GIN-debug] GET    /api/v1/routes/favorites  --> stridemoor-api/internal/handler.(*RouteHandler).ListFavorites-fm (4 handlers)
+[GIN-debug] GET    /api/v1/routes/:id        --> stridemoor-api/internal/handler.(*RouteHandler).GetRouteDetail-fm (4 handlers)
+[GIN-debug] POST   /api/v1/routes/:id/favorite --> stridemoor-api/internal/handler.(*RouteHandler).FavoriteRoute-fm (4 handlers)
+[GIN-debug] DELETE /api/v1/routes/:id/favorite --> stridemoor-api/internal/handler.(*RouteHandler).UnfavoriteRoute-fm (4 handlers)
+[GIN-debug] DELETE /api/v1/routes/:id        --> stridemoor-api/internal/handler.(*RouteHandler).DeleteRoute-fm (4 handlers)
+[GIN-debug] GET    /api/v1/routes/:id/leaderboard --> stridemoor-api/internal/handler.(*RouteHandler).GetLeaderboard-fm (4 handlers)
+[GIN-debug] POST   /api/v1/routes/:id/rate   --> stridemoor-api/internal/handler.(*RouteHandler).RateRoute-fm (4 handlers)
+[GIN-debug] PUT    /api/v1/routes/:id        --> stridemoor-api/internal/handler.(*RouteHandler).UpdateRoute-fm (4 handlers)
+[GIN-debug] GET    /api/v1/routes/nearby     --> stridemoor-api/internal/handler.(*RouteHandler).NearbyRoutes-fm (4 handlers)
+[GIN-debug] POST   /api/v1/friends/requests  --> stridemoor-api/internal/handler.(*FriendshipHandler).SendFriendRequest-fm (4 handlers)
+[GIN-debug] GET    /api/v1/friends/requests/pending --> stridemoor-api/internal/handler.(*FriendshipHandler).ListPendingRequests-fm (4 handlers)
+[GIN-debug] POST   /api/v1/friends/requests/:id/accept --> stridemoor-api/internal/handler.(*FriendshipHandler).AcceptFriendRequest-fm (4 handlers)
+[GIN-debug] POST   /api/v1/friends/requests/:id/reject --> stridemoor-api/internal/handler.(*FriendshipHandler).RejectFriendRequest-fm (4 handlers)
+[GIN-debug] GET    /api/v1/friends           --> stridemoor-api/internal/handler.(*FriendshipHandler).ListFriends-fm (4 handlers)
+[GIN-debug] DELETE /api/v1/friends/:id       --> stridemoor-api/internal/handler.(*FriendshipHandler).RemoveFriend-fm (4 handlers)
+[GIN-debug] POST   /api/v1/challenges        --> stridemoor-api/internal/handler.(*ChallengeHandler).CreateChallenge-fm (4 handlers)
+[GIN-debug] GET    /api/v1/challenges        --> stridemoor-api/internal/handler.(*ChallengeHandler).ListChallenges-fm (4 handlers)
+[GIN-debug] GET    /api/v1/challenges/:id    --> stridemoor-api/internal/handler.(*ChallengeHandler).GetChallengeDetail-fm (4 handlers)
+[GIN-debug] POST   /api/v1/challenges/:id/accept --> stridemoor-api/internal/handler.(*ChallengeHandler).AcceptChallenge-fm (4 handlers)
+[GIN-debug] POST   /api/v1/challenges/:id/start --> stridemoor-api/internal/handler.(*ChallengeHandler).StartChallenge-fm (4 handlers)
+[GIN-debug] POST   /api/v1/challenges/:id/complete --> stridemoor-api/internal/handler.(*ChallengeHandler).CompleteChallenge-fm (4 handlers)
+[GIN-debug] POST   /api/v1/challenges/:id/cancel --> stridemoor-api/internal/handler.(*ChallengeHandler).CancelChallenge-fm (4 handlers)
+[GIN-debug] GET    /api/v1/challenges/:id/comparison --> stridemoor-api/internal/handler.(*ChallengeHandler).GetComparison-fm (4 handlers)
+[GIN-debug] POST   /api/v1/upload/avatar     --> stridemoor-api/internal/handler.(*UploadHandler).UploadAvatar-fm (4 handlers)
+[GIN-debug] POST   /api/v1/upload/gpx        --> stridemoor-api/internal/handler.(*UploadHandler).UploadGPX-fm (4 handlers)
+[GIN-debug] POST   /api/v1/users/:id/follow  --> stridemoor-api/internal/handler.(*FollowHandler).FollowUser-fm (4 handlers)
+[GIN-debug] DELETE /api/v1/users/:id/follow  --> stridemoor-api/internal/handler.(*FollowHandler).UnfollowUser-fm (4 handlers)
+[GIN-debug] GET    /api/v1/users/followings  --> stridemoor-api/internal/handler.(*FollowHandler).ListFollowings-fm (4 handlers)
+[GIN-debug] GET    /api/v1/users/followers   --> stridemoor-api/internal/handler.(*FollowHandler).ListFollowers-fm (4 handlers)
+[GIN-debug] GET    /api/v1/posts             --> stridemoor-api/internal/handler.(*PostHandler).ListPosts-fm (4 handlers)
+[GIN-debug] POST   /api/v1/posts             --> stridemoor-api/internal/handler.(*PostHandler).CreatePost-fm (4 handlers)
+[GIN-debug] GET    /api/v1/posts/:id         --> stridemoor-api/internal/handler.(*PostHandler).GetPostDetail-fm (4 handlers)
+[GIN-debug] POST   /api/v1/posts/:id/comments --> stridemoor-api/internal/handler.(*PostHandler).CreateComment-fm (4 handlers)
+[GIN-debug] GET    /api/v1/posts/:id/comments --> stridemoor-api/internal/handler.(*PostHandler).ListComments-fm (4 handlers)
+[GIN-debug] POST   /api/v1/posts/:id/like    --> stridemoor-api/internal/handler.(*PostHandler).LikePost-fm (4 handlers)
+[GIN-debug] DELETE /api/v1/posts/:id/like    --> stridemoor-api/internal/handler.(*PostHandler).UnlikePost-fm (4 handlers)
+[GIN-debug] GET    /api/v1/user/paojing      --> stridemoor-api/internal/handler.(*PaojingHandler).GetPaojing-fm (4 handlers)
+[GIN-debug] POST   /api/v1/user/paojing/check --> stridemoor-api/internal/handler.(*PaojingHandler).CheckUpgrade-fm (4 handlers)
+[GIN-debug] GET    /api/v1/devices           --> stridemoor-api/internal/handler.(*DeviceHandler).ListDevices-fm (4 handlers)
+[GIN-debug] POST   /api/v1/devices           --> stridemoor-api/internal/handler.(*DeviceHandler).BindDevice-fm (4 handlers)
+[GIN-debug] PATCH  /api/v1/devices/:id       --> stridemoor-api/internal/handler.(*DeviceHandler).UpdateDevice-fm (4 handlers)
+[GIN-debug] DELETE /api/v1/devices/:id       --> stridemoor-api/internal/handler.(*DeviceHandler).UnbindDevice-fm (4 handlers)
+[GIN-debug] POST   /api/v1/runs/import       --> stridemoor-api/internal/handler.(*DeviceHandler).ImportRun-fm (4 handlers)
+[GIN-debug] GET    /api/v1/runs/import/history --> stridemoor-api/internal/handler.(*DeviceHandler).ListImportHistory-fm (4 handlers)
+[GIN-debug] DELETE /api/v1/runs/import/:id   --> stridemoor-api/internal/handler.(*DeviceHandler).DeleteImported-fm (4 handlers)
+[GIN-debug] POST   /api/v1/admin/realm/debug-set --> stridemoor-api/internal/handler.(*PaojingHandler).DebugSetRealm-fm (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080

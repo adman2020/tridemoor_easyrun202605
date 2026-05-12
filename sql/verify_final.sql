@@ -1,0 +1,1 @@
+SELECT CONCAT(TABLE_NAME, '.', COLUMN_NAME) AS col FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='stridemoor' AND TABLE_NAME IN ('posts','runs','routes','users') AND (COLUMN_NAME LIKE '%deleted%' OR COLUMN_NAME='review_status' OR COLUMN_NAME='is_hidden' OR COLUMN_NAME='is_banned') ORDER BY TABLE_NAME, ORDINAL_POSITION;

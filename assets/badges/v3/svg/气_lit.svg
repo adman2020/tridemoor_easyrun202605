@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <radialGradient id="bg_气" cx="45%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#7BA684" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#7BA684" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#3D5C3D" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="g_气">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow_filter">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="text_shadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  
+  
+  
+  <!-- Outer petal border -->
+  <path d="M150.2,50.9 Q162.1,80.0 150.2,109.1 Q138.0,138.0 109.1,150.2 Q80.0,162.1 50.9,150.2 Q22.0,138.0 9.8,109.1 Q-2.1,80.0 9.8,50.9 Q22.0,22.0 50.9,9.8 Q80.0,-2.1 109.1,9.8 Q138.0,22.0 150.2,50.9 Z" fill="url(#bg_气)" stroke="#5A7D5A" stroke-width="2.5"/>
+  
+  <!-- Inner petal highlight -->
+  <path d="M144.7,53.2 Q154.2,80.0 144.7,106.8 Q132.5,132.5 106.8,144.7 Q80.0,154.2 53.2,144.7 Q27.5,132.5 15.3,106.8 Q5.8,80.0 15.3,53.2 Q27.5,27.5 53.2,15.3 Q80.0,5.8 106.8,15.3 Q132.5,27.5 144.7,53.2 Z" fill="none" stroke="#9BC4A0" stroke-width="0.8" opacity="0.4"/>
+  
+  <!-- Inner decorative ring (dashed) -->
+  <path d="M144.7,53.2 Q154.2,80.0 144.7,106.8 Q132.5,132.5 106.8,144.7 Q80.0,154.2 53.2,144.7 Q27.5,132.5 15.3,106.8 Q5.8,80.0 15.3,53.2 Q27.5,27.5 53.2,15.3 Q80.0,5.8 106.8,15.3 Q132.5,27.5 144.7,53.2 Z" fill="none" stroke="#5A7D5A" stroke-width="1" stroke-dasharray="3,3" opacity="0.3"/>
+  
+  <!-- Decorative dots between petals -->
+  <circle cx="158.0" cy="80.0" r="2.5" fill="#5A7D5A" opacity="0.8"/>
+  <circle cx="135.2" cy="135.2" r="2.5" fill="#5A7D5A" opacity="0.8"/>
+  <circle cx="80.0" cy="158.0" r="2.5" fill="#5A7D5A" opacity="0.8"/>
+  <circle cx="24.8" cy="135.2" r="2.5" fill="#5A7D5A" opacity="0.8"/>
+  <circle cx="2.0" cy="80.0" r="2.5" fill="#5A7D5A" opacity="0.8"/>
+  <circle cx="24.8" cy="24.8" r="2.5" fill="#5A7D5A" opacity="0.8"/>
+  <circle cx="80.0" cy="2.0" r="2.5" fill="#5A7D5A" opacity="0.8"/>
+  <circle cx="135.2" cy="24.8" r="2.5" fill="#5A7D5A" opacity="0.8"/>
+  
+  
+  <!-- Particle effects -->
+  
+  
+  <!-- Bottom decoration element -->
+  <path d="M55,126 Q75,111 85,131 Q95,121 110,128" fill="none" stroke="#9BC4A0" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Character with shadow and glow -->
+  <text x="80" y="88" font-family="KaiTi,STKaiti,serif" font-size="56" font-weight="bold"
+        fill="#5A7D5A" text-anchor="middle" filter="url(#text_shadow)" dominant-baseline="central">气</text>
+  
+  <!-- Medal name -->
+  <text x="80" y="144" font-family="KaiTi,STKaiti,serif" font-size="9" font-weight="bold"
+        fill="#9BC4A0" text-anchor="middle" opacity="0.7" letter-spacing="1">气引勋章</text>
+</svg>

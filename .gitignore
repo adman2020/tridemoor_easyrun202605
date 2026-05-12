@@ -1,0 +1,29 @@
+# Flutter
+stride_moor_app/.dart_tool/
+stride_moor_app/.packages
+stride_moor_app/.pub/
+stride_moor_app/build/
+stride_moor_app/.flutter-plugins
+stride_moor_app/.flutter-plugins-dependencies
+stride_moor_app/*.iml
+stride_moor_app/.idea/
+stride_moor_app/pubspec.lock
+
+# Node (RuoYi-Vue3)
+RuoYi-Vue3/node_modules/
+RuoYi-Vue3/dist/
+
+# Go
+backend/bin/
+backend/tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.idea/
+*.iml
+.vscode/

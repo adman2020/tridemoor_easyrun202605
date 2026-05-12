@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="UTF-8"><title>修仙境界勋章</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0f0f1a;padding:40px;font-family:KaiTi,STKaiti,serif}
+h1{color:#FFD700;text-align:center;font-size:28px;margin-bottom:8px}
+.sub{color:#666;text-align:center;font-size:13px;margin-bottom:30px}
+h3{text-align:center;font-size:14px;margin:24px 0 12px}
+h3.l{color:#FFD700}
+h3.d{color:#555}
+.grid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:24px}
+.item{text-align:center;padding:6px;border-radius:8px;width:96px}
+.item.lit{background:rgba(255,215,0,0.05)}
+.item.dim{background:rgba(85,85,85,0.05)}
+.item svg{width:72px;height:72px}
+.item .nm{color:#999;font-size:11px;margin-top:2px}
+.item.lit .nm{color:#ccc}
+.item.idx{color:#555;font-size:10px}
+</style></head>
+<body>
+<h1>十二境 · 勋章</h1>
+<p class="sub">跑者修仙 · 一字一境</p>
+
+<h3 class="l">✨ 点亮</h3>
+<div class="grid" id="g1"></div>
+<h3 class="d">🌫️ 虚化</h3>
+<div class="grid" id="g2"></div>
+
+<script>
+const R = [
+  ['炼','炼气','#5A6B5C','#7BA684','#A3D4A8'],
+  ['丹','结丹','#B87333','#4A9B6E','#6BC48A'],
+  ['婴','元婴','#C0C0C0','#4A90D9','#7AB8F0'],
+  ['化','化神','#FFD700','#2B5EA7','#5A8FE0'],
+  ['虚','练虚','#FFC125','#6C3FC5','#9B6EE8'],
+  ['合','合体','#DAA520','#8B3A8B','#B55AB5'],
+  ['乘','大乘','#CD5C1C','#D2691E','#E88A45'],
+  ['真','真仙','#FFD700','#FF8C00','#FFB347'],
+  ['金','金仙','#FF4500','#DAA520','#F0C75E'],
+  ['太','太乙','#FF69B4','#DC143C','#FF4D6D'],
+  ['罗','大罗','#FFD700','#B8860B','#D4A847'],
+  ['道','道祖','#FFF8DC','#1A1A2E','#E8D5B7']
+];
+
+function badge(ch, nm, bd, bg, ac, dim) {
+  const d = (a) => dim ? a.replace(/[^,]+/g, (m,i,s)=>i>0&&s[i-1]==='#'?'#888':m) : a;
+  const dot = (ang) => {
+    const r = Math.PI*ang/180, x=60+48*Math.cos(r), y=60+48*Math.sin(r);
+    return `<circle cx="${x}" cy="${y}" r="2" fill="${dim?'#888':bd}"/>`;
+  };
+  const f = dim ? '#888' : bd;
+  const o = dim ? '0.2' : '1';
+  const bgo = dim ? '0.08' : '1';
+  const bgc = dim ? '#666' : bg;
+  const tc = dim ? '#999' : f;
+  const to = dim ? '0.25' : '1';
+  return `<svg viewBox="0 0 120 120" width="90" height="90">
+    <defs>${dim?'':`<radialGradient id="g"><stop offset="0%" stop-color="${ac}" stop-opacity="0.9"/><stop offset="60%" stop-color="${bg}" stop-opacity="0.9"/><stop offset="100%" stop-color="${bg}"/></radialGradient>`}
+    <filter id="h"><feGaussianBlur stdDeviation="2"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+    <circle cx="60" cy="60" r="56" fill="none" stroke="${f}" stroke-width="2.5" opacity="${o}"/>
+    ${dot(0)}${dot(90)}${dot(180)}${dot(270)}
+    <circle cx="60" cy="60" r="48" fill="none" stroke="${f}" stroke-width="1" stroke-dasharray="3,3" opacity="${dim?0.15:0.5}"/>
+    <circle cx="60" cy="60" r="44" fill="${dim?'none':'url(#g)'}" opacity="${bgo}"/>
+    ${dim?'':`<path d="M38,18 Q42,14 46,18 Q50,12 54,18 Q58,14 62,18 Q66,12 70,18 L68,22 L40,22 Z" fill="${bd}" opacity="0.2"/>
+    <path d="M38,102 Q42,106 46,102 Q50,108 54,102 Q58,106 62,102 Q66,108 70,102 L68,98 L40,98 Z" fill="${bd}" opacity="0.2"/>`}
+    <text x="60" y="74" font-family="KaiTi,STKaiti,serif" font-size="52" font-weight="bold"
+      fill="${tc}" text-anchor="middle" opacity="${to}" filter="url(#h)">${ch}</text>
+    <text x="60" y="108" font-family="KaiTi,STKaiti,serif" font-size="10"
+      fill="${tc}" text-anchor="middle" opacity="${dim?0.1:0.5}">${nm}</text>
+  </svg>`;
+}
+
+function render(divId, dim) {
+  const div = document.getElementById(divId);
+  R.forEach(([ch, nm, bd, bg, ac], i) => {
+    const el = document.createElement('div');
+    el.className = 'item' + (dim ? ' dim' : ' lit');
+    el.innerHTML = badge(ch, nm, bd, bg, ac, dim) + `<div class="nm"><span class="idx">${i+1}</span>${nm}</div>`;
+    div.appendChild(el);
+  });
+}
+render('g1', false);
+render('g2', true);
+</script>
+</body>
+</html>

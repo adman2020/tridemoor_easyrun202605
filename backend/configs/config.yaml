@@ -1,0 +1,19 @@
+server:
+  port: "8080"
+database:
+  dsn: "stridemoor:stridemoor_pass_2026@tcp(stridemoor-mysql:3306)/stridemoor?charset=utf8mb4&parseTime=True&loc=Asia%2FShanghai"
+redis:
+  addr: "stridemoor-redis:6379"
+  password: ""
+  db: 0
+jwt:
+  secret: "stridemoor_jwt_secret_key_2026"
+  # 运动 App 长会话：access token 30 天，refresh token 90 天
+  expire_hours: 720
+  refresh_days: 90
+minio:
+  endpoint: "stridemoor-minio:9000"
+  access_key: "stridemoor"
+  secret_key: "stridemoor_minio_2026"
+  bucket: "stridemoor"
+  use_ssl: false

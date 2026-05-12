@@ -1,0 +1,22 @@
+========================================
+ PowerShell 启动速度检测
+========================================
+
+[1/2] PowerShell 基础启动耗时:
+[Proxy] 已设置: http://127.0.0.1:7890
+  42 ms
+
+[2/2] PowerShell 二次启动耗时（预热后）:
+[Proxy] 已设置: http://127.0.0.1:7890
+  33 ms
+
+Profile 文件位置：
+[Proxy] 已设置: http://127.0.0.1:7890
+  AllUsersAllHosts:    C:\Windows\System32\WindowsPowerShell\v1.0\profile.ps1
+  AllUsersCurrentHost: C:\Windows\System32\WindowsPowerShell\v1.0\Microsoft.PowerShell_profile.ps1
+  CurrentUserAllHosts: C:\Users\Administered\Documents\WindowsPowerShell\profile.ps1
+  CurrentUserCurrentHost: C:\Users\Administered\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
+========================================
+ 检测完成
+========================================

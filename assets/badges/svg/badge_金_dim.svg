@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="56" fill="none" stroke="#888" stroke-width="2.5" opacity="0.2"/>
+  <circle cx="60" cy="12" r="2.5" fill="#888" opacity="0.2"/>
+  <circle cx="108" cy="60" r="2.5" fill="#888" opacity="0.2"/>
+  <circle cx="12" cy="60" r="2.5" fill="#888" opacity="0.2"/>
+  <circle cx="60" cy="108" r="2.5" fill="#888" opacity="0.2"/>
+  <circle cx="60" cy="60" r="48" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3,3" opacity="0.2"/>
+  <circle cx="60" cy="60" r="44" fill="#666" opacity="0.08"/>
+  <path d="M38,18 Q42,14 46,18 Q50,12 54,18 Q58,14 62,18 Q66,12 70,18 L68,22 L40,22 Z" fill="#888" opacity="0.1"/>
+  <path d="M38,102 Q42,106 46,102 Q50,108 54,102 Q58,106 62,102 Q66,108 70,102 L68,98 L40,98 Z" fill="#888" opacity="0.1"/>
+  <text x="60" y="74" font-family="KaiTi,STKaiti,serif" font-size="52"
+        font-weight="bold" fill="#999" text-anchor="middle" opacity="0.25">金</text>
+  <text x="60" y="108" font-family="KaiTi,STKaiti,serif" font-size="10"
+        fill="#999" text-anchor="middle" opacity="0.15">金仙</text>
+</svg>

@@ -1,0 +1,9 @@
+2026/04/30 14:13:31 🚀 StrideMoor API 启动成功，监听 :8080
+2026/04/30 14:20:22 [route] GetLeaderboard routeID=86992120-3eec-4ce4-b44d-8da0c6691632 sortBy="" page=1 pageSize=20
+2026/04/30 14:20:46 [route] GetLeaderboard routeID=86992120-3eec-4ce4-b44d-8da0c6691632 sortBy="time_asc" page=1 pageSize=20
+2026/04/30 14:29:09 [route] GetLeaderboard routeID=86992120-3eec-4ce4-b44d-8da0c6691632 sortBy="" page=1 pageSize=20
+2026/04/30 14:29:27 [route] GetLeaderboard routeID=86992120-3eec-4ce4-b44d-8da0c6691632 sortBy="time_asc" page=1 pageSize=20
+2026/04/30 14:44:36 [route] GetLeaderboard routeID=86992120-3eec-4ce4-b44d-8da0c6691632 sortBy="" page=1 pageSize=20
+2026/04/30 14:44:43 [route] GetLeaderboard routeID=86992120-3eec-4ce4-b44d-8da0c6691632 sortBy="time_asc" page=1 pageSize=20
+2026/04/30 15:10:42 [route] GetLeaderboard routeID=5987f1a0-d8fb-48d0-b559-59322f913fe0 sortBy="" page=1 pageSize=20
+2026/04/30 15:10:58 [route] GetLeaderboard routeID=5987f1a0-d8fb-48d0-b559-59322f913fe0 sortBy="time_asc" page=1 pageSize=20

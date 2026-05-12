@@ -1,0 +1,70 @@
+# ============================================================
+# StrideMoor - Docker Compose (独立部署配置)
+# ============================================================
+# 前提：MySQL数据库需提前准备好（stridemoor + ry_stridemoor）
+# 如无独立MySQL，可取消下方mysql服务的注释
+
+services:
+  # ─── StrideMoor API (Go) ───
+  stridemoor-api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: stridemoor-api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - GIN_MODE=release
+      - DB_DSN=root:G-;fnxjV4Ck(@tcp(mysql:3306)/stridemoor?charset=utf8mb4&parseTime=True&loc=Asia%2FShanghai
+    networks:
+      - stridemoor-net
+
+  # ─── StrideMoor Admin (RuoYi/Spring Boot) ───
+  stridemoor-admin:
+    build:
+      context: ./RuoYi-Vue3
+      dockerfile: Dockerfile
+    container_name: stridemoor-admin
+    restart: unless-stopped
+    ports:
+      - "8088:8088"
+    environment:
+      - SPRING_DATASOURCE_DRUID_MASTER_URL=jdbc:mysql://mysql:3306/ry_stridemoor?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_DRUID_MASTER_USERNAME=root
+      - SPRING_DATASOURCE_DRUID_MASTER_PASSWORD=stridemoor_root_2026
+      - SPRING_DATASOURCE_DRUID_SLAVE_URL=jdbc:mysql://mysql:3306/stridemoor?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_DRUID_SLAVE_USERNAME=root
+      - SPRING_DATASOURCE_DRUID_SLAVE_PASSWORD=stridemoor_root_2026
+    # depends_on:
+    #   mysql:
+    #     condition: service_healthy
+    networks:
+      - stridemoor-net
+
+  # ─── MySQL (可选：如需Docker化MySQL可取消注释) ───
+  # mysql:
+  #   image: mysql:8.0
+  #   container_name: stridemoor-mysql
+  #   restart: unless-stopped
+  #   ports:
+  #     - "3306:3306"
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: G-;fnxjV4Ck(
+  #   volumes:
+  #     - mysql-data:/var/lib/mysql
+  #     - ./sql/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+  #   healthcheck:
+  #     test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+  #   networks:
+  #     - stridemoor-net
+
+networks:
+  stridemoor-net:
+    name: stridemoor-network
+
+# volumes:
+#   mysql-data:
