@@ -6,3 +6,13 @@
 node_modules/
 .cache/
 tmp/
+*.exe
+*.out
+server
+server_linux
+stridemoor-api
+stridemoor-api-linux
+stridemoor-api-new
+main.exe
+bin/
+uploads/

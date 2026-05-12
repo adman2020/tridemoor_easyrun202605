@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+// ignore_for_file: use_build_context_synchronously
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
@@ -263,6 +265,7 @@ class _UploadRoutePageState extends ConsumerState<UploadRoutePage> {
         _createRoute(ctx, run, name, descCtrl, tagsCtrl, centerLat, centerLng, points);
       } catch (e) {
         // 校验失败，走正常流程（不阻塞用户）
+        if (!mounted) return;
         _createRoute(ctx, run, name, descCtrl, tagsCtrl, centerLat, centerLng, points);
       }
       return;
@@ -334,9 +337,12 @@ class _UploadRoutePageState extends ConsumerState<UploadRoutePage> {
     final dupDist = (dupInfo['distance'] as num?)?.toDouble() ?? 0;
     final diff = (dupInfo['diff'] as num?)?.toDouble() ?? 0;
 
+    // 检查 StatefulWidget 是否仍然挂载
+    if (!mounted) return;
+
     await showDialog<void>(
       context: ctx,
-      builder: (ctx) => AlertDialog(
+      builder: (dialogCtx) => AlertDialog(
         title: const Text('发现相似路线'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -368,24 +374,27 @@ class _UploadRoutePageState extends ConsumerState<UploadRoutePage> {
         ),
         actions: [
           TextButton(
-            onPressed: () => Navigator.of(ctx).pop(),
+            onPressed: () => Navigator.of(dialogCtx).pop(),
             child: const Text('取消'),
           ),
           TextButton(
             onPressed: () {
-              Navigator.of(ctx).pop();
+              Navigator.of(dialogCtx).pop();
               // 忽略重复警告，强制创建
               _submitCreateRoute(ctx, run, nameCtrl, descCtrl, tagsCtrl, skipValidation: true, forceCreate: true);
             },
             child: const Text('仍要发布'),
           ),
           ElevatedButton(
-            onPressed: () => Navigator.of(ctx).pop(),
+            onPressed: () => Navigator.of(dialogCtx).pop(),
             child: const Text('返回修改'),
           ),
         ],
       ),
     );
+
+    // Dialog 关闭后，底部弹窗仍存在，检查 StatefulWidget 是否挂载
+    if (!mounted) return;
   }
 
   Future<void> _createRoute(
@@ -398,6 +407,8 @@ class _UploadRoutePageState extends ConsumerState<UploadRoutePage> {
     double centerLng,
     List<Map<String, dynamic>> points,
   ) async {
+    // 防止底部弹窗关闭后使用 context
+    if (!mounted) return;
     final api = ref.read(apiServiceProvider);
 
     // 解析标签

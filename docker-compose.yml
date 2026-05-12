@@ -29,6 +29,8 @@ services:
     restart: unless-stopped
     ports:
       - "8088:8088"
+    volumes:
+      - 'E:\bakeup:/backup'
     environment:
       - SPRING_DATASOURCE_DRUID_MASTER_URL=jdbc:mysql://mysql:3306/ry_stridemoor?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
       - SPRING_DATASOURCE_DRUID_MASTER_USERNAME=root

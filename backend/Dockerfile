@@ -5,6 +5,7 @@
 FROM golang:1.22-alpine AS builder
 
 WORKDIR /app
+ENV GOPROXY=https://goproxy.cn,direct
 COPY go.mod go.sum ./
 RUN go mod download
 
@@ -14,7 +15,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /app/stridemoor-api ./cmd/server/main.g
 # Runtime stage
 FROM alpine:3.19
 
-RUN apk --no-cache add ca-certificates tzdata && \
+RUN apk --no-cache -X http://mirrors.aliyun.com/alpine/v3.19/main -X http://mirrors.aliyun.com/alpine/v3.19/community add ca-certificates tzdata && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone
 

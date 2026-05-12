@@ -210,6 +210,7 @@ func (s *RunService) FinishRun(ctx context.Context, runID string, userID string,
 				ID:       uuid.New().String(),
 				RunAID:   runID,
 				RunBID:   *req.OpponentRunID,
+				OverallDiff: "{}",
 			})
 		}
 	}
